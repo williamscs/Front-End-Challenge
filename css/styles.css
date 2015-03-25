@@ -30,8 +30,7 @@ img {
 	font-size: 0.75em
 }
 .cell {
-	overflow: hidden;/*
-	display: inline-block;*/
+	overflow: hidden;
 	min-width: 250px;
 	float: left;
 	max-width: 300px;
