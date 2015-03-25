@@ -1,5 +1,5 @@
 var app = {
-	createDivs: function(data, parentDiv) {
+	attachDivs: function(data, parentDiv) {
 		var arr = data.new_sales;
 		for (var i = 0; i < arr.length; i++) {
 			var link = this.createItem(arr[i]);
