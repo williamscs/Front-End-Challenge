@@ -1,8 +1,7 @@
 var app = {
-	createDivs: function(data) {
+	createDivs: function(data, parentDiv) {
 		var arr = data.new_sales;
 		var tmp;
-		var parentDiv = jQuery('<div/>');
 		for (var i = 0; i < arr.length; i++) {
 			tmp = arr[i];
 			var figure = jQuery('<figure/>', {
@@ -15,19 +14,22 @@ var app = {
 
 			var img = jQuery('<img/>', {
 						id: tmp.id + '_0',
-						src: tmp.photos.medium_wide,
-						//title: data.tagline,
-						//rel: 'external',
-						//text: 'Go to Google!'
+						src: tmp.photos.medium_half
 					});
 			var caption1 = jQuery('<figcaption/>', {
+								class: 'captionTitle',
 								text: tmp.name
 							});
 			var caption2 = jQuery('<figcaption/>', {
+								class: 'captionTagline',
 								text: tmp.tagline
 							});
+			var link = jQuery('<a/>', {
+								class: 'itemLink',
+								href: tmp.url
+							});
 
-			parentDiv.append(figure.append(img).append(caption1).append(caption2));
+			parentDiv.append(link.append(figure.append(img).append(caption1).append(caption2)));
 		}
 		return parentDiv;
 

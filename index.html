@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>Front End Challenge</title>
 	</head>
 	<body>
@@ -9,6 +10,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/tom.js"></script>
 		<script type="text/javascript" src="./js/app.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
 		<script type="text/javascript">
 			/*$.ajax({
 				url: "https://www.touchofmodern.com/sales.json?callback=?",
@@ -23,9 +25,10 @@
 				}
 			});*/
 			$( document ).ready(function() {
-				jQuery('#main-content').append(app.createDivs(tom));
+				app.createDivs(tom, jQuery("#main-content"));
 				//jQuery('#content').html(JSON.stringify(tom));
 			});
 		</script>
+		<link rel="stylesheet"  media="all" type="text/css" href="./css/styles.css">
 	</body>
 </html>

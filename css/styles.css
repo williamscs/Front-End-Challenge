@@ -1,0 +1,81 @@
+* {
+	font-family: 'Noto Serif', sans-serif;
+}
+
+figure {
+	padding-bottom: 1em;
+	margin: 1em 0.5em;
+
+	outline: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+figure:hover {
+    -webkit-animation: slightFadeIn 0.25s ease-in; 
+       -moz-animation: slightFadeIn 0.25s ease-in; 
+         -o-animation: slightFadeIn 0.25s ease-in; 
+            animation: slightFadeIn 0.25s ease-in; 
+
+    background-color: #f5f5f5;
+}
+
+img {
+	width: 100%;
+}
+
+.captionTitle{
+	font-size: 1em;
+}
+.captionTagline{
+	font-size: 0.75em
+}
+.cell {
+	overflow: hidden;
+	display: inline-block;
+    /*margin: 0 5px;*/
+	min-width: 250px;
+	max-width: 300px;
+}
+.itemLink {
+	color: inherit;
+}
+
+#main-content {
+	height: 100%;
+	margin: 0 auto;
+	max-width: 1300px;
+	text-align: center; /* align horizontal */
+}
+
+@media (max-width : 920px){
+	.cell {
+		width: 100%;
+	}
+}
+@media (max-width: 1100px) and (min-width: 921px){
+	.cell {
+		width: 45%;
+	}
+}
+@media (min-width: 1101px){
+	.cell {
+		width: 30%;
+	}
+}
+
+@-webkit-keyframes slightFadeIn {
+  0%   { background-color: #FFFFFF; }
+  100%  { background-color: #f5f5f5; }
+}
+@-moz-keyframes slightFadeIn {
+  0%   { background-color: #FFFFFF; }
+  100%  { background-color: #f5f5f5; }
+}
+@-o-keyframes slightFadeIn {
+  0%   { background-color: #FFFFFF; }
+  100%  { background-color: #f5f5f5; }
+}
+@keyframes slightFadeIn {
+  0%   { background-color: #FFFFFF; }
+  100%  { background-color: #f5f5f5; }
+}
