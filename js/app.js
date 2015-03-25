@@ -8,7 +8,7 @@ var app = {
 							id: 'cell_' + tmp.id,
 							class: 'cell',
 							href: tmp.url,
-							title: data.name,
+							title: tmp.name,
 							rel: 'external'
 						});
 
@@ -32,9 +32,6 @@ var app = {
 			parentDiv.append(link.append(figure.append(img).append(caption1).append(caption2)));
 		}
 		return parentDiv;
-
-	},
-	processJson: function(data) {
 
 	}
 };
