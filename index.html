@@ -3,13 +3,29 @@
 	<head>
 		<meta charset="UTF-8">
 			<title>Front End Challenge</title>
-		</head>
+	</head>
 	<body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript">
-		$( document ).ready(function() {
-    	console.log( "ready!" );
-		});
-	</script>
+		<div id="main-content"></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/tom.js"></script>
+		<script type="text/javascript" src="./js/app.js"></script>
+		<script type="text/javascript">
+			/*$.ajax({
+				url: "https://www.touchofmodern.com/sales.json?callback=?",
+				type: "GET",
+				dataType: 'application/json',
+				cache: true,
+				success: function (data, status, error) {
+					console.log('success', data);
+				},
+				error: function (data, status, error) {
+					console.log('error', data, status, error);
+				}
+			});*/
+			$( document ).ready(function() {
+				jQuery('#main-content').append(app.createDivs(tom));
+				//jQuery('#content').html(JSON.stringify(tom));
+			});
+		</script>
 	</body>
 </html>
